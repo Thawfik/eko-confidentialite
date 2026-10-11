@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suppression des données – Eko</title>
+  <meta name="description" content="Demandez la suppression de votre compte Eko et de vos données personnelles à partir de votre adresse e-mail ou de votre numéro de téléphone. Sans connexion.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#00002d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Suppression des données – Eko">
+  <meta property="og:description" content="Demandez la suppression de votre compte Eko et de vos données personnelles.">
+  <meta property="og:image" content="assets/logo-eko.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="entete">
+    <div class="contenu">
+      <a class="logo" href="index.html" aria-label="Eko — politique de confidentialité"><img src="assets/logo-eko.png" alt="Eko" width="90" height="38"></a>
+      <nav aria-label="Pages légales">
+        <a href="index.html">Confidentialité</a>
+        <a href="suppression-des-donnees.html" aria-current="page">Suppression des données</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bandeau">
+    <div class="contenu">
+      <p class="fil"><a href="index.html">Politique de confidentialité</a> › Suppression des données</p>
+      <h1>Supprimer mon compte et mes données Eko</h1>
+      <p class="chapeau">Vous pouvez demander la suppression de votre compte Eko et des données personnelles associées, sans vous connecter, à partir de l'adresse e-mail ou du numéro de téléphone utilisé pour votre compte.</p>
+      <div class="meta">
+        <span class="pastille">Application Eko — COMPTAPROART SARL</span>
+        <span class="pastille">Réponse sous 1 mois</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="colonne">
+    <section class="carte" aria-labelledby="titre-app">
+      <h2 id="titre-app">Depuis l'application</h2>
+      <p>Si vous avez encore accès à votre compte, le plus rapide est de le supprimer directement dans Eko :</p>
+      <ol class="etapes">
+        <li>Ouvrez l'application Eko et connectez-vous.</li>
+        <li>Allez dans la rubrique <strong>« Compte »</strong>.</li>
+        <li>Choisissez la suppression du compte et confirmez.</li>
+      </ol>
+    </section>
+
+    <section class="carte" aria-labelledby="titre-form">
+      <h2 id="titre-form">Faire une demande en ligne</h2>
+      <p>Vous n'avez plus accès à l'application ? Indiquez l'identifiant de votre compte : votre demande est adressée à notre service Protection des données.</p>
+
+      <form id="form-suppression" novalidate>
+        <fieldset class="choix">
+          <legend>Identifier mon compte par</legend>
+          <label><input type="radio" name="mode" value="email" checked> Adresse e-mail</label>
+          <label><input type="radio" name="mode" value="telephone"> Numéro de téléphone</label>
+        </fieldset>
+
+        <div class="champ" id="bloc-email">
+          <label for="email">Adresse e-mail du compte</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="exemple@domaine.com" aria-describedby="err-email">
+          <div class="erreur" id="err-email" hidden></div>
+        </div>
+
+        <div class="champ" id="bloc-telephone" hidden>
+          <label for="telephone">Numéro de téléphone du compte</label>
+          <div class="tel">
+            <select id="indicatif" name="indicatif" aria-label="Indicatif du pays">
+              <option value="+228" selected>Togo +228</option>
+              <option value="+229">Bénin +229</option>
+              <option value="+225">Côte d'Ivoire +225</option>
+              <option value="+226">Burkina Faso +226</option>
+              <option value="+233">Ghana +233</option>
+              <option value="+227">Niger +227</option>
+              <option value="+221">Sénégal +221</option>
+              <option value="+33">France +33</option>
+              <option value="">Autre</option>
+            </select>
+            <input id="telephone" name="telephone" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="90 00 00 00" aria-describedby="err-telephone">
+          </div>
+          <div class="aide">Le numéro utilisé pour créer votre compte Eko.</div>
+          <div class="erreur" id="err-telephone" hidden></div>
+        </div>
+
+        <div class="champ">
+          <label for="nom">Nom et prénoms <span style="font-weight:400;color:var(--gris)">(facultatif)</span></label>
+          <input id="nom" name="nom" type="text" autocomplete="name">
+        </div>
+
+        <div class="champ">
+          <label for="motif">Motif ou précisions <span style="font-weight:400;color:var(--gris)">(facultatif)</span></label>
+          <textarea id="motif" name="motif" rows="3"></textarea>
+        </div>
+
+        <label class="coche">
+          <input type="checkbox" id="confirme" aria-describedby="err-confirme">
+          <span>Je demande la suppression définitive de mon compte Eko et des données associées. Je comprends que cette action est irréversible.</span>
+        </label>
+        <div class="erreur" id="err-confirme" hidden style="margin-top:-12px;margin-bottom:16px"></div>
+
+        <div class="actions">
+          <button class="bouton" type="submit">Envoyer ma demande</button>
+          <a class="bouton secondaire" href="index.html#s8">Mes droits</a>
+        </div>
+      </form>
+
+      <div class="confirmation" id="confirmation" hidden tabindex="-1" role="status">
+        <h3>Votre messagerie va s'ouvrir avec la demande pré-remplie</h3>
+        <p>Vérifiez puis <strong>envoyez le message</strong> pour finaliser votre demande. Si votre messagerie ne s'ouvre pas, copiez le texte ci-dessous et envoyez-le à <a href="mailto:yoboussoumi@eko-tg.com">yoboussoumi@eko-tg.com</a> ou <a href="mailto:lfaya@eko-tg.com">lfaya@eko-tg.com</a>.</p>
+        <pre id="apercu"></pre>
+        <div class="actions">
+          <button class="bouton" type="button" id="copier">Copier le texte</button>
+          <a class="bouton secondaire" id="rouvrir" href="#">Rouvrir la messagerie</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="carte" aria-labelledby="titre-donnees">
+      <h2 id="titre-donnees">Ce qui est supprimé, ce qui est conservé</h2>
+      <div class="grille-donnees">
+        <div>
+          <h3>Supprimé sous 30 jours</h3>
+          <ul>
+            <li>Votre compte, identité et coordonnées (nom, prénoms, téléphone, e-mail)</li>
+            <li>Votre activité professionnelle</li>
+            <li>Les données de gestion saisies : recettes, dépenses, factures, stocks, clients et fournisseurs</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Conservé temporairement</h3>
+          <ul>
+            <li>Abonnement, facturation et justificatifs de paiement : durées imposées par la législation comptable et fiscale, puis suppression ou anonymisation</li>
+            <li>Journaux de connexion et données techniques : 12 mois maximum</li>
+            <li>Messages à l'assistance : 3 ans après le dernier échange</li>
+            <li>Statistiques anonymisées, qui ne vous identifient pas</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:16px">Les sauvegardes de sécurité sont purgées selon leur cycle propre. Pour vérifier que la demande émane bien du titulaire du compte, nous pouvons vous demander un justificatif d'identité (art. 39 et 46 de la loi n° 2019-014) ; il sert uniquement à cette vérification et n'est pas conservé au-delà.</p>
+      <p>Nous répondons dans un délai d'un (1) mois à compter de l'enregistrement de votre demande. Sans réponse dans ce délai, vous pouvez saisir l'IPDCP. Détails dans la <a href="index.html#s6">politique de confidentialité</a>.</p>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="contenu">
+      <span>© 2026 COMPTAPROART SARL — Eko · Lomé, Togo</span>
+      <nav aria-label="Liens de pied de page">
+        <a href="index.html">Politique de confidentialité</a>
+        <a href="suppression-des-donnees.html">Suppression des données</a>
+        <a href="mailto:yoboussoumi@eko-tg.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var DESTINATAIRES = 'yoboussoumi@eko-tg.com,lfaya@eko-tg.com';
+      var form = document.getElementById('form-suppression');
+      var blocEmail = document.getElementById('bloc-email');
+      var blocTel = document.getElementById('bloc-telephone');
+      var email = document.getElementById('email');
+      var tel = document.getElementById('telephone');
+      var indicatif = document.getElementById('indicatif');
+      var confirme = document.getElementById('confirme');
+      var confirmation = document.getElementById('confirmation');
+      var apercu = document.getElementById('apercu');
+      var rouvrir = document.getElementById('rouvrir');
+
+      function mode() { return form.querySelector('input[name="mode"]:checked').value; }
+
+      function erreur(id, champ, message) {
+        var el = document.getElementById(id);
+        el.textContent = message || '';
+        el.hidden = !message;
+        if (champ) champ.setAttribute('aria-invalid', message ? 'true' : 'false');
+        return !message;
+      }
+
+      form.querySelectorAll('input[name="mode"]').forEach(function (r) {
+        r.addEventListener('change', function () {
+          var parEmail = mode() === 'email';
+          blocEmail.hidden = !parEmail;
+          blocTel.hidden = parEmail;
+          erreur('err-email', email, '');
+          erreur('err-telephone', tel, '');
+          (parEmail ? email : tel).focus();
+        });
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var ok = true, identifiant, libelle;
+
+        if (mode() === 'email') {
+          var v = email.value.trim();
+          ok = erreur('err-email', email, !v ? 'Indiquez l\'adresse e-mail de votre compte.' :
+            !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? 'Cette adresse e-mail n\'est pas valide.' : '') && ok;
+          identifiant = v; libelle = 'Adresse e-mail du compte';
+        } else {
+          var chiffres = tel.value.replace(/[^\d]/g, '');
+          ok = erreur('err-telephone', tel, !chiffres ? 'Indiquez le numéro de téléphone de votre compte.' :
+            chiffres.length < 8 ? 'Ce numéro de téléphone semble incomplet.' : '') && ok;
+          identifiant = (indicatif.value ? indicatif.value + ' ' : '') + tel.value.trim();
+          libelle = 'Numéro de téléphone du compte';
+        }
+        ok = erreur('err-confirme', null, confirme.checked ? '' : 'Cochez la case pour confirmer votre demande.') && ok;
+
+        if (!ok) {
+          var premiere = form.querySelector('[aria-invalid="true"]') || confirme;
+          premiere.focus();
+          return;
+        }
+
+        var nom = document.getElementById('nom').value.trim();
+        var motif = document.getElementById('motif').value.trim();
+        var sujet = 'Demande de suppression de compte et de données – Eko';
+        var corps = [
+          'Bonjour,',
+          '',
+          'Je demande la suppression de mon compte Eko et des données personnelles associées, conformément à la loi n° 2019-014 relative à la protection des données à caractère personnel.',
+          '',
+          libelle + ' : ' + identifiant,
+          nom ? 'Nom et prénoms : ' + nom : null,
+          motif ? 'Motif / précisions : ' + motif : null,
+          '',
+          'Merci de me confirmer la prise en compte de cette demande.',
+          '',
+          'Cordialement'
+        ].filter(function (l) { return l !== null; }).join('\n');
+
+        var lien = 'mailto:' + DESTINATAIRES + '?subject=' + encodeURIComponent(sujet) + '&body=' + encodeURIComponent(corps);
+        apercu.textContent = 'À : ' + DESTINATAIRES.replace(',', ', ') + '\nObjet : ' + sujet + '\n\n' + corps;
+        rouvrir.href = lien;
+        confirmation.hidden = false;
+        confirmation.focus();
+        window.location.href = lien;
+      });
+
+      document.getElementById('copier').addEventListener('click', function () {
+        var bouton = this, texte = apercu.textContent;
+        function fait() { bouton.textContent = 'Texte copié'; setTimeout(function () { bouton.textContent = 'Copier le texte'; }, 2000); }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(texte).then(fait, function () {});
+        } else {
+          var r = document.createRange(); r.selectNodeContents(apercu);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          try { document.execCommand('copy'); fait(); } catch (err) {}
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

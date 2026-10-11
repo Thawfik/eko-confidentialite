@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: eko-confidentialite
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+    routes:
+      - type: rewrite
+        source: /politique-de-confidentialite
+        destination: /index.html
+      - type: rewrite
+        source: /suppression-des-donnees
+        destination: /suppression-des-donnees.html
