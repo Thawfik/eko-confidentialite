@@ -61,7 +61,7 @@ img { max-width: 100%; height: auto; }
 .liste li { margin-bottom: 4px; padding-left: 2px; }
 .liste li::marker { color: var(--primaire); font-weight: 600; }
 
-.bloc-suppression { border-top: 1px solid var(--bord); padding-top: 24px; }
+.suppression { background: var(--carte); border: 1px solid #d3e5fb; border-radius: 4px; padding: 14px 16px; color: var(--texte-fort); }
 .lien-suppression { font-weight: 600; }
 
 /* Pied de page */
